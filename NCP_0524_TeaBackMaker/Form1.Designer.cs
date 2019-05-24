@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.cbTea = new System.Windows.Forms.ComboBox();
             this.btStart = new System.Windows.Forms.Button();
-            this.lbTime = new System.Windows.Forms.Label();
             this.lbDeveloper = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.lbTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbTea
@@ -53,16 +53,7 @@
             this.btStart.TabIndex = 1;
             this.btStart.Text = "담그기!";
             this.btStart.UseVisualStyleBackColor = true;
-            // 
-            // lbTime
-            // 
-            this.lbTime.AutoSize = true;
-            this.lbTime.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbTime.Location = new System.Drawing.Point(40, 52);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(49, 16);
-            this.lbTime.TabIndex = 2;
-            this.lbTime.Text = "label1";
+            this.btStart.Click += new System.EventHandler(this.BtStart_Click);
             // 
             // lbDeveloper
             // 
@@ -76,6 +67,17 @@
             // timer
             // 
             this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbTime.Location = new System.Drawing.Point(12, 48);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(77, 16);
+            this.lbTime.TabIndex = 2;
+            this.lbTime.Text = "남은 시간";
             // 
             // Form1
             // 
@@ -88,6 +90,7 @@
             this.Controls.Add(this.cbTea);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,9 +100,9 @@
 
         private System.Windows.Forms.ComboBox cbTea;
         private System.Windows.Forms.Button btStart;
-        private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbDeveloper;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label lbTime;
     }
 }
 
