@@ -14,7 +14,7 @@ namespace NCP_0524_TeaBackMaker
     public partial class Form1 : Form
     {
         string[] teaList = new string[] { "홍차", "녹차", "루이보스차", "국화차" };
-        int[] timeList = new int[] { 2*60, 30*60, 50*60, 20*60 };  //분 단위
+        int[] timeList = new int[] { 2*60, 3*60, 5*60, 2*0 };  //분 단위
         string selectTea = "";  //선택한 차 저장
         int timeCount = 0;
 
